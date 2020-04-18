@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
-    <script src="/socket.io-stream.js"></script>
-    <link rel="stylesheet" href="http://localhost:8000/index.css" >
+    <link rel="stylesheet" href="index.css">    
 <style>
     body
     {
@@ -18,11 +15,12 @@
 <body id="body" style="overflow: hidden; ">
     
     <img id="img" style="width: 200px;height: 200px;">
-
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+    <script src="/socket.io-stream.js"></script>
     <script>
         
-        const content = document.getElementById('content');
-        const socket = io();
+        var socket = io();
         socket.on('return', function(data){
             alert(data);
         });
